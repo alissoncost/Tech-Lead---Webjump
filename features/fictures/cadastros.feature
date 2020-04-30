@@ -1,21 +1,21 @@
             #language: pt
 
-            Funcionalidade: Efetuar dois cadastros para o chat como pessoa fisica .
+            Funcionalidade: Efetuar cadastro para o chat da AVI .
             Contexto:
-            Dado que eu acesso 'https://apm7.xgen.com.br/cielo3/f_cielo_site_novo.html'
+            Dado que eu acesso 'https://snd.virtualinteractions.com.br/pt_BR/avi.html?id=136&source=1&target=1&channel=1&launchType=popup&ms=1588259576853#forward'
 
-            Cenario: Conexao ao chat para pessoas que ja sao clientes Cielo
-            Quando Seleciono que 'Já sou cliente' e o assunto que vai ser pauta
-            E preencho <nome> <email> <telefone> <cpf>
-            E clico em 'Acessar'
-            Então vejo na tela 'Atendimento OnLine'
+            Cenario: Conexao ao chat para pessoa física
+            Quando preencho <nome> <cpf/CNPJ> <email> <telefone> de forma valida e não valida
+            E clico em Entrar no chat
+            Então vejo na tela o chat disponível para conversa ou as mensagens de Erro ao preencher.
 
-            Cenario: Conexao ao chat para pessoas que nao sao clientes Cielo
-            Quando Seleciono que 'Não sou Cliente Cielo'
-            E Seleciono o assunto
-            E preencho <nome> <email> <telefone> <cpf>
-            Então vejo na tela 'Atendimento OnLine'
 
             Exemplos:
-            | nome    | email                  | telefone    | cpf            |
-            | Alisson | alisson@mailinator.com | 11958041211 | 632.516.740-64 |
+            | nome    | email                       | telefone     | cpf/CNPJ           |
+            | Alisson | alisson@mailinator.com      | 11958041211  | 632.516.740-64     |
+            | aaaaa   | alissonteste@mailinator.com | 11111111111  | 63251674064        |
+            | aaaa    | aaaaaaaaaa                  | aaaaaaaaaa   | 00000000000        |
+            | IVA     | iva@mailinator.com          | 11958041211  | 32.324.301/0001-48 |
+            | IVA     | iva@mailinator.com          | 11958041211  | 32324301000148     |
+            | IVA     | aaaaaaaaaaaaaaaa            | aaaaaaaaaaaa | 00000000000000     |
+
