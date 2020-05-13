@@ -1,8 +1,8 @@
             #language: pt
 
             Funcionalidade: Testes de cadastro para chat AVI
-            Contexto:
-            Dado que eu acesso 'https://snd.virtualinteractions.com.br/pt_BR/avi.html?id=136&source=1&target=1&channel=1&launchType=popup&ms=1588259576853#forward'
+            Contexto: Acesso a Página de cadastro ao chat
+            Dado que eu acesso 'SND Chat AVI'
 
             Cenario: Conexao ao chat para pessoa fisica valido
             Quando preencho de forma valida Nome "Alisson", CPF "43827320852", email "alisson@mailinator.com" e telefone "1125452111"
