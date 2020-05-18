@@ -1,22 +1,23 @@
 #language: pt
 Funcionalidade: Solicitacao de credito como cliente
-Contexto: Estar efetuando uma solicitacao de credito
-Dado que estou realizando a solicitacao de credito
 
 Cenario: Solicitacao de acordo com o esperado para aprovacao
-Quando O cliente informa os dados de forma esperada para prosseguir
-E esta aprovado para o credito
+Dado Solicitacao de liberacao de credito
+Quando os Documentos informados sao suficientes
+E o credito e aprovado
 Entao mostro mensagem e envio o credito solicitado
 
 Cenario: Solicitacao de credito nao aprovado
-Quando informo os dados de forma esperada para prosseguir
+Dado Solicitacao de liberacao de credito
+Quando os documentos informados sao suficientes
 E nao sou aprovado para o credito
-Entao vejo a mensagem de credito nao aprovado
+Entao informo ao cliente que o credito nao foi aprovado
 
 Cenario: Dados da solicitacao invalidos ou incompletos
-Quando informo os dados de fomra invalida ou incompleta
-E tento avancar
-Então Vejo a mensagem de solicitacao de dados 
+Dado solicitacao de liberacao de credito
+Quando realizo a validacao dos documentos informados
+E os dados nao sao suficientes para uma analise de credito
+Então solicito ao cliente mais informacoes para uma nova analise
 
 
 

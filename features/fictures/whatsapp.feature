@@ -8,7 +8,7 @@ Funcionalidade: Testes no aplicativo do whatsapp
     Entao vejo a minha conta logada
 
     Cenario: Primeiro acesso com campos solicitados em branco
-    Dado que estou preenchendo meus dados para o acesso
+    Dado que estou realizando um primeiro acesso ao aplicativo
     Quando com os campos em branco eu clico em avançar
     Entao vejo a mensagem "Tamanho do código do país inválido (somente 1-3 dígitos)."
 
